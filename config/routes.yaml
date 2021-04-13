@@ -1,3 +1,18 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+connexion :
+    path : /connexion
+    controller: App\Controller\ConnexionController::index
+
+listcompterendu: 
+    path: /listcompterendu
+    controller: App\Controller\ListcompterenduController::index
+
+listpracticiens:
+    path : /listpracticiens
+    controller: App\Controller\ListpracticiensController::index
+    
+accueil_gsb_php:
+    path: /accueil_gsb_php
+    controller : App\Controller\AccueilGSBPhpController::index
