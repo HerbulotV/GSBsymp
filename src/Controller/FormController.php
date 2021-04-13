@@ -3,8 +3,6 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -12,17 +10,8 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\ResetType;
 
-class ConnexionController extends AbstractController
+class FormController extends AbstractController
 {
-    /**
-     * @Route("/connexion", name="connexion")
-     */
-    public function index(): Response
-    {
-        return $this->render('connexion/index.html.twig', [
-            'controller_name' => 'ConnexionController',
-        ]);
-    }
     public function connexion()
     {
         $form = $this->createFormBuilder()
@@ -42,4 +31,9 @@ class ConnexionController extends AbstractController
             return $this->render('connexion/index.html.twig',
                     array('form'=>$form->createView()));
         }
-}
+        
+            
+               
+       
+    }
+
